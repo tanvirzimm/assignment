@@ -1,8 +1,13 @@
 import React from 'react';
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import './Header.css';
+import { useAuth } from '../Login/Login';
 
 const Header = () => {
+
+    const [user, setUser] = useAuth();
+    console.log(user);
+
     return (
         <div className='container'>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -29,7 +34,7 @@ const Header = () => {
                             <Link to='/' className="nav-link">CONTACT</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to='/login' className="nav-link special"><button className="login">Login</button></Link>
+                            <Link to='/login' className="nav-link special">{user ? <button className="login">{user.email}</button> : <button className="login">Login</button>}</Link>
                         </li>
                     </ul>
 

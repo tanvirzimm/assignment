@@ -1,12 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {Link} from "react-router-dom";
 import './Login.css';
 import { useForm } from "react-hook-form";
+import { createContext } from 'react';
+import { useContext } from 'react';
+
+
+const AuthContext = createContext();
+
+export const AuthProvider = (props) => {
+
+     const [user,setUser] =  useState(null);
+     return <AuthContext.Provider value={[user,setUser]}>{props.children}</AuthContext.Provider>
+
+}
+
+export const useAuth = () => useContext(AuthContext);
+
+
 
 const Login = () => {
+    
+    const [user,setUser] = useAuth();
 
     const { register, handleSubmit, watch, errors } = useForm();
-    const onSubmit = data => console.log(data);
+    const onSubmit = data => setUser(data);
 
     return (
         <div>
@@ -19,8 +37,8 @@ const Login = () => {
                                 <input name="pass" ref={register({ required: true })} placeholder="Your password" />
                                 {errors.pass && <span>This field is required</span>}
 
-
-                                <Link to='/'><input type="submit" value="Log In"/></Link>
+                               
+                                <input type="submit" value="Log In"/>
                             </form>
         </div>
     );
