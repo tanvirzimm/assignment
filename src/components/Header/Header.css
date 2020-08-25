@@ -1,0 +1,52 @@
+.bg-light{
+    background-color:white !important;
+}
+
+.nav-link{
+  font-size: 13px;
+  color:black !important;
+  margin-left:20px;
+  cursor: pointer;
+  
+}
+
+
+.manu{
+    line-height: 39px;
+}
+
+
+
+.nav-link:hover{
+
+    color:#6EB6DC !important;
+    padding-bottom:2px;
+    border-bottom:1px solid #6EB6DC;
+    
+}
+
+
+.navbar-brand{
+
+    font-weight: 600;
+}
+
+.login{
+    background-color:#6EB6DC;
+    color:white;
+    text-align: center;
+    padding:10px 20px;
+    border:none;
+    border-radius:5px;
+   
+    
+}
+
+
+.special:hover{
+    border:none !important;
+}
+
+.login:hover{
+    background-color:#62a7cc;
+}

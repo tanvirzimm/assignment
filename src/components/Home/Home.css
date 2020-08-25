@@ -1,0 +1,27 @@
+.banner{
+background-color:#6EB6DC;
+height:400px;
+text-align:center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.greet{
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.under-greet{
+    width:400px;
+    margin:30px 0;
+}
+
+.contact{
+width:200px;
+border:none;
+padding:10px 20px;
+background-color:black;
+color:white;
+}

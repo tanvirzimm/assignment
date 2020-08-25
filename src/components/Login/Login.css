@@ -1,0 +1,29 @@
+input{
+    display: block;
+    margin-top:10px;
+    width:300px;
+    border:none;
+    background-color:rgb(228, 228, 228);
+    border-radius:5px;
+    padding:10px 10px;
+    text-align: center;
+}
+
+
+input[type=submit]{
+    background-color:rgb(54, 190, 54);
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+
+input:focus{
+    outline:0;
+}
+
+
+form{
+    width:300px;
+    margin:50px auto;
+}
